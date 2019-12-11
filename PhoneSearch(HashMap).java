@@ -41,8 +41,8 @@ public class Main
             switch(ch)
             {
                 case 1: main.display();
-                        break;
-                case 2: search();
+                      break;
+                case 2: main.search();
                         break;
                 default: System.out.println("Invalid choice");
             }
@@ -63,5 +63,28 @@ public class Main
         }
     }
     
+    void search()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Search key");
+        String key=sc.next();
+        Iterator ir=hm.entrySet().iterator();
+        while(ir.hasNext())
+        {
+            Map.Entry<String,Input> temp=(Map.Entry) ir.next();
+            String nm=temp.getKey();
+            Input ph=temp.getValue();
+            if(nm.contains(key))
+            {
+                System.out.println("Name : "+nm+"\tPrimary Number : "+ph.p_num+"\tSecondary Number: "+ph.s_num);
+            }
+            else
+            {
+                System.out.println("No record exists");
+            }
+            
+        }
+        
+    }
 
 }
