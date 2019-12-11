@@ -33,20 +33,21 @@ public class Main
             hm.put(name,new Input(p_num,s_num));
         }while(!cond.equals("stop"));
         
-        int ch=0;
+        int ch;
         do
         {
             System.out.println("1.Display\n2.Search\n3.Exit");
-             ch = sc.nextInt();
-            switch(ch)
-            {
-                case 1: main.display();
-                      break;
-                case 2: main.search();
-                        break;
-                default: System.out.println("Invalid choice");
+            ch = sc.nextInt();
+            
+            if(ch==1){
+                
+                main.display();
             }
-        }while(ch==3);
+            else if(ch==2){
+                
+                 main.search();
+            }
+        }while(ch!=3);
         
     }
 
@@ -74,7 +75,14 @@ public class Main
             Map.Entry<String,Input> temp=(Map.Entry) ir.next();
             String nm=temp.getKey();
             Input ph=temp.getValue();
-            if(nm.contains(key))
+            
+            String temp1 = nm;
+            temp1=temp1.toUpperCase();
+            //System.out.println(temp1);
+            String temp2 = key;
+            temp2=temp2.toUpperCase();
+            //System.out.println(temp2);
+            if(temp1.contains(temp2))
             {
                 System.out.println("Name : "+nm+"\tPrimary Number : "+ph.p_num+"\tSecondary Number: "+ph.s_num);
             }
