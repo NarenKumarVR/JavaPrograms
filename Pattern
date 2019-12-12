@@ -1,0 +1,32 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 5;
+		int count = 0;
+		for(int i = 1 ; i <= n ; i++)
+		{
+		    for(int j = 1; j < i+1; j++)
+		    {
+		         count++;
+		        System.out.print(count+" ");
+		       
+		    }
+		    System.out.println();
+		}
+	
+	    int start=count-(n-1);
+	    int end=count;
+		for(int i=1;i<=n;i++)
+		{
+		    for(int j=start;j<=end;j++)
+		    {
+		        System.out.print(j+" ");
+		        count--;
+		    }
+		  System.out.println();
+		 end=count;
+		 start=count-(n-1)+i;
+		}
+	}
+}
