@@ -129,6 +129,16 @@ class LinkedList {
         }
         System.out.println("Value not found");
     }
+    
+    public void reverse(int count)
+    {
+        Node node = new Node();
+        String str = " ";
+        Node temp = head;
+        while(temp.next!=)
+        str = temp.data + str;
+        System.out.println(str);
+    }
 }
 
 class Node {
@@ -136,7 +146,7 @@ class Node {
     Node next;
 }
 
-class Main {
+public class Main {
     
     public static void main(String args[])
     {
@@ -152,7 +162,7 @@ class Main {
         int ch = 1;
         do
         {
-            System.out.println("1.Insert at beginning\n2.Insert at position\n3.Insert at end\n4.Search\n5.Delete\n6.Display\n7.Exit");
+            System.out.println("1.Insert at beginning\n2.Insert at position\n3.Insert at end\n4.Search\n5.Delete\n6.Reverse\n7.Display\n8.Exit");
             ch = sc.nextInt();
             switch(ch)
             {
@@ -177,13 +187,21 @@ class Main {
                 case 5: System.out.println("Enter value to be deleted");
                         ll.delete(sc.nextInt());
                         break;
-                case 6: System.out.println("Values present");
+                
+                case 6: System.out.println("Enter number of values to be reversed");
+                        ll.reverse(sc.nextInt());
+                        break;
+                        
+                case 7: System.out.println("Values present");
                         ll.print();
                         break;
             }
-        }while(ch<7);
+        }while(ch<8);
         System.out.println("Exited");
         
         
     }
 }
+
+
+
