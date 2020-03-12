@@ -1,0 +1,62 @@
+import java.util.*;
+public class HillStationSafari
+{
+    public static void main(String[] args) 
+    {
+    Scanner sc=new Scanner(System.in);
+    int size = sc.nextInt();
+    for(int z=0; z<size;z++)
+    {
+        int l=0,comp=0;
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int q=sc.nextInt();
+        int p=sc.nextInt();
+        int r=sc.nextInt();
+        int k=sc.nextInt();
+        
+        int temp=n;
+        int trip[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            trip[i]=0;
+        }
+        
+        int num_cars=m+q;
+        for(int i=1;i<=k;i++)
+        {
+            if(i%r==0 && m>0)
+            {
+                m--;
+                q++;
+            }
+            for(int j=0;j<n;j++)
+            {
+                if(trip[j]>0)
+                    trip[j]--;
+                if(trip[j]==0)
+                {
+                    if(q>0)
+                    {
+                        q--;
+                        trip[j]=p;
+                    }
+                }
+            }
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(trip[i]==0)
+                l++;
+            else 
+                comp++;
+        }
+        int res=num_cars-m-q-comp;
+        System.out.println(l+" "+res+" "+m+" "+q);
+        
+        
+        
+        }
+    }
+}
+
