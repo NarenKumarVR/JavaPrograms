@@ -1,0 +1,42 @@
+import java.util.*;
+class WaterProblem
+{
+    String cluster;
+    int days;
+    int no_pipes;
+    
+    public void WaterProblem(String cluster, int days, int no_pipes)
+    {
+        this.cluster = cluster;
+        this.days = days;
+        this.no_pipes = no_pipes;
+    }
+    
+    public split()
+    
+}
+
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<WaterProblem> cluster = new ArrayList<WaterProblem>();
+        ArrayList<WaterProblem> link = new ArrayList<WaterProblem>();
+        int days = sc.nextInt();
+        int links = sc.nextInt();
+        
+        for(int i=0; i<days; i++)
+        {
+            String cluster;
+            arr.add(cluster);
+        }
+        
+        for(int i=0; i<links; i++)
+        {
+            String Linkdefinitions;
+            arr.add(Linkdefinitions);
+        }
+        
+    }
+}
