@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    
+		Scanner sc = new Scanner(System.in);
+		int no_atms = sc.nextInt();
+		int size_houses = sc.nextInt();
+		ArrayList<Integer> houses = new ArrayList<>();
+		for(int i=0; i<size_houses; i++)
+		{
+		    houses.add(sc.nextInt());
+		    
+		}
+		int max = Collections.max(houses);
+		int avg = max / size_houses;
+		//System.out.println(max);
+		int temp = avg;
+		while(avg == max)
+ 		{
+		    for(int i=temp; i<=avg; i++)
+		    {
+	            if(houses.contains(i))
+	            {
+    	            System.out.println(i);
+	            
+	            }
+	   // }
+		
+	        }
+    }
+}
